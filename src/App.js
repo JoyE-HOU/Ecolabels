@@ -1,15 +1,36 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+
 import './App.css';
+import './component/Landing'
+import Landing from './component/Landing';
+import Nav from './component/Nav';
+import User from './component/User';
+import EcoForm from './component/EcoForm';
 
 function App() {
   return (
     <div className="App">
+      <Nav />
 
-      <div class="box-3">
-        <div class="btn btn-three">
-          <span>HOVER ME</span>
-        </div>
-      </div>
+      <BrowserRouter>
+
+        <Route exact path='/'>
+          <Landing />
+        </Route>
+
+        <Route path='/user'>
+          <User />
+        </Route>
+
+        {/* <Route path='/ecoform'>
+          <EcoForm />
+        </Route> */}
+
+        <Route>
+          <Redirect to='/' />
+        </Route>
+
+      </BrowserRouter>
 
     </div>
   );
