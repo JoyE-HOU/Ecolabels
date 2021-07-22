@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+
 import './App.css';
 import './component/Landing'
 import Landing from './component/Landing';
@@ -9,10 +10,28 @@ import EcoForm from './component/EcoForm';
 function App() {
   return (
     <div className="App">
-      <div><Landing /></div>
-      <div><Nav /></div>
-      <div><User /></div>
-      <div><EcoForm /></div>
+      <Nav />
+
+      <BrowserRouter>
+
+        <Route exact path='/'>
+          <Landing />
+        </Route>
+
+        <Route path='/user'>
+          <User />
+        </Route>
+
+        {/* <Route path='/ecoform'>
+          <EcoForm />
+        </Route> */}
+
+        <Route>
+          <Redirect to='/' />
+        </Route>
+
+      </BrowserRouter>
+
     </div>
   );
 }
