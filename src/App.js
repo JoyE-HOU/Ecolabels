@@ -1,4 +1,9 @@
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { 
+  BrowserRouter, 
+  Route, 
+  Redirect,
+  Switch 
+} from 'react-router-dom';
 
 import './App.css';
 import './component/Landing'
@@ -13,23 +18,26 @@ function App() {
       <Nav />
 
       <BrowserRouter>
+        <Switch>
 
-        <Route exact path='/'>
-          <Landing />
-        </Route>
 
-        <Route path='/user'>
-          <User />
-        </Route>
+          <Route exact path='/'>
+            <Landing />
+          </Route>
 
-        {/* <Route path='/ecoform'>
-          <EcoForm />
-        </Route> */}
+          <Route path='/user'>
+            <User />
+          </Route>
 
-        <Route>
-          <Redirect to='/' />
-        </Route>
+          {/* <Route path='/ecoform'>
+            <EcoForm />
+          </Route> */}
 
+          <Route>
+            <Redirect to='/' />
+          </Route>
+
+        </Switch>
       </BrowserRouter>
 
     </div>
