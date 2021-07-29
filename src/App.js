@@ -15,7 +15,6 @@ import EcoForm from './component/EcoForm';
 function App() {
   return (
     <div className="App">
-      <Nav />
 
       <BrowserRouter>
         <Switch>
@@ -26,6 +25,7 @@ function App() {
           </Route>
 
           <Route path='/user'>
+            <Nav />
             <User />
           </Route>
 

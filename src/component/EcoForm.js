@@ -4,6 +4,9 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
+// import { withRouter } from 'react-router'
+// get more info at 53:30 for more info about withRouter since you want this to redirect back HOME after submitting form.
+
 function EcoForm() {
      return (
        <div>
