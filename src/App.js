@@ -1,9 +1,12 @@
+import React, {useState, useEffect} from 'react'
 import { 
   BrowserRouter, 
   Route, 
   Redirect,
   Switch 
 } from 'react-router-dom';
+
+import axios from 'axios';
 
 import './App.css';
 import './component/Landing'
@@ -13,6 +16,26 @@ import User from './component/User';
 import EcoForm from './component/EcoForm';
 
 function App() {
+
+  const [allData, setAllData] = useState([]);
+  const [filteredData, setFilteredData] = useState(allData);
+
+  useEffect(() => {
+    axios('http://localhost:3000/api/v1/ecolabel_categories')
+    .then(response => {
+      console.log(response.data)
+      setAllData(response.data);
+      setFilteredData(response.data);
+    })
+    .catch(error => {
+      console.log('Error getting fake data: ' + error);
+    })
+  }, []);
+  
+  const handleSearch = (event) =>{
+
+  }
+
   return (
     <div className="App">
 
