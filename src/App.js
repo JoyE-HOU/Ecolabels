@@ -17,24 +17,24 @@ import EcoForm from './component/EcoForm';
 
 function App() {
 
-  const [allData, setAllData] = useState([]);
-  const [filteredData, setFilteredData] = useState(allData);
+  // const [allData, setAllData] = useState([]);
+  // const [filteredData, setFilteredData] = useState(allData);
 
-  useEffect(() => {
-    axios('http://localhost:3000/api/v1/ecolabel_categories')
-    .then(response => {
-      console.log(response.data)
-      setAllData(response.data);
-      setFilteredData(response.data);
-    })
-    .catch(error => {
-      console.log('Error getting fake data: ' + error);
-    })
-  }, []);
+  // useEffect(() => {
+  //   axios('http://localhost:3000/api/v1/ecolabel_categories')
+  //   .then(response => {
+  //     console.log(response.data)
+  //     setAllData(response.data);
+  //     setFilteredData(response.data);
+  //   })
+  //   .catch(error => {
+  //     console.log('Error getting fake data: ' + error);
+  //   })
+  // }, []);
   
-  const handleSearch = (event) =>{
+  // const handleSearch = (event) =>{
 
-  }
+  // }
 
   return (
     <div className="App">
