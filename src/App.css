@@ -60,9 +60,3 @@ div[class*=box] {
   justify-content: center;
   align-items: center;
 }
-
-.Landing {
-  text-align: center;
-  color: cadetblue;
-  padding: 150px;
-}
