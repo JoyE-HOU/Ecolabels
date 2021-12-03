@@ -14,6 +14,14 @@ function Nav() {
                 <a><NavLink to="/news">News</NavLink></a>
                 <a><NavLink to="/contact">Contact</NavLink></a>
                 <a><NavLink to="/about">About</NavLink></a>
+                <span 
+                // style={{ margin: '0 auto', marginTop: '10%'}}
+                >
+                <label>Search:</label>
+                <input type="text" 
+                // onChange={(event) => handleSearch(event)
+                />
+            </span>
             </div>
             </nav>
         </div>
