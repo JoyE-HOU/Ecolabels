@@ -13,7 +13,6 @@ import './component/Landing'
 import Landing from './component/Landing';
 import Nav from './component/Nav';
 import User from './component/User';
-import EcoForm from './component/EcoForm';
 
 function App() {
 
@@ -45,16 +44,12 @@ function App() {
 
           <Route exact path='/'>
             <Landing />
-          </Route>
+          {/* </Route> */}
 
-          <Route path='/user'>
+          {/* <Route path='/user'> */}
             <Nav />
             <User />
           </Route>
-
-          {/* <Route path='/ecoform'>
-            <EcoForm />
-          </Route> */}
 
           <Route>
             <Redirect to='/' />
